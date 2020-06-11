@@ -20,8 +20,9 @@ class AudioVisualDataset(DatasetFolder):
     def __init__(self, args, dataset_file=None, logger=None):
         self.args = args
         t = time.time()
+        print(dataset_file)
         self.feature_paths, self.labels = pickle.load(open(dataset_file, "rb"))
-
+        print(self.feature_paths)
         if logger is not None:
             logger.debug('Time to load paths: {}'.format(time.time() - t))
             logger.debug("Number of videos: {}".format(len(self.feature_paths)))
@@ -34,7 +35,6 @@ class AudioVisualDataset(DatasetFolder):
         audio_feature_path = feature_path.replace('imageAudio_features', 'audio_features') # path to the audio feature
         
         #load features
-        print(image_feature_path)
         image_feature = np.load(image_feature_path)
         audio_feature = np.load(audio_feature_path)
 
