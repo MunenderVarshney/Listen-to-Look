@@ -34,6 +34,7 @@ class AudioVisualDataset(DatasetFolder):
         audio_feature_path = feature_path.replace('imageAudio_features', 'audio_features') # path to the audio feature
         
         #load features
+        print(image_feature_path)
         image_feature = np.load(image_feature_path)
         audio_feature = np.load(audio_feature_path)
 
