@@ -2,9 +2,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
+
+# folders to ignore 
+logs/
+checkpoints/
+ActivityNet/
 
 # Distribution / packaging
 .Python
