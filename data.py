@@ -31,6 +31,7 @@ class AudioVisualDataset(DatasetFolder):
         #path to load features
         feature_path = self.feature_paths[idx] # path to the imageAudio feature
         label = self.labels[idx]
+        feature_path = feature_path.replace('/private/home/rhgao/datasets/', '~/')
         image_feature_path = feature_path.replace('imageAudio_features', 'image_features') # path to the image feature
         audio_feature_path = feature_path.replace('imageAudio_features', 'audio_features') # path to the audio feature
         
